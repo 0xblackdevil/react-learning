@@ -1,6 +1,5 @@
 import React from 'react';
 import "./master.scss";
-import "../ep5/master.scss";
 import HeaderComponent from '../ep5/component/HeaderComponent';
 import BodyComponent from './component/BodyComponent';
 
@@ -24,7 +23,6 @@ export default EP6Learning = () => {
     return (
         <div className='app'>
             <HeaderComponent />
-
             {/* enable for lecture reference */}
             <BodyComponent />
         </div>

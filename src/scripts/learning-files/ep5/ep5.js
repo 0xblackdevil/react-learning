@@ -2,7 +2,6 @@ import React from 'react';
 import "./master.scss";
 import HeaderComponent from './component/HeaderComponent';
 import Ep5BodyComponent from '../../assignment/assignment05/Ep5BodyComponent';
-import BodyComponent from './component/BodyComponent';
 
 /**
  * In this section__

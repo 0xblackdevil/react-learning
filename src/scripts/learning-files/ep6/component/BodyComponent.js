@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import "../master.scss";
 import RestCardBody from "./RestCardBody";
+import CategoryBody from "./CategoryBody";
 
 
 
@@ -19,6 +20,8 @@ export default BodyComponent = () => {
     const [restroData, setRestroData] = useState([]);
     const [filterData, setFilterData] = useState([]);
 
+    const [categoryData, setCategoryData] = useState([]);
+
     const [searchData, setSearchData] = useState("");
 
     useEffect(() => {
@@ -32,6 +35,8 @@ export default BodyComponent = () => {
             const json = await data.json();
             setRestroData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
             setFilterData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+
+            setCategoryData(json?.data.cards[0].card.card);
         } catch (e) {
             return e;
         }
@@ -39,7 +44,7 @@ export default BodyComponent = () => {
 
     return (
         <div className='body'>
-            <div className="action-btn">
+            {/* <div className="action-btn">
                 <div className='searchbox'>
                     <input placeholder='Search for cusine' value={searchData} onChange={e => setSearchData(e.target.value)} />
                 </div>
@@ -65,10 +70,9 @@ export default BodyComponent = () => {
                         Search
                     </button>
                 </div>
-            </div>
-            {/* <div className='res-container'>
-                {restroData.map(restaurant => <RestroCard data={restaurant} key={restaurant.info.id} />)}
             </div> */}
+            <CategoryBody categoryData={categoryData} />
+            <div className="line" />
             <RestCardBody restroData={filterData} />
         </div >
     )

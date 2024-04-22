@@ -6,7 +6,6 @@ export default HeaderComponent = () => {
         <div className='header'>
             <div className='logo'>
                 <span>🍔</span>
-                <h1>0xFoodApp</h1>
             </div>
             <div className='nav-items'>
                 <ul>

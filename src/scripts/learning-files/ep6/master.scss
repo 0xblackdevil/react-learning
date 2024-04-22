@@ -1,15 +1,17 @@
+// eba761
 body {
   margin: 0%;
   padding: 0%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 2%;
+  padding: 10px 5%;
   background-color: white;
+  filter: drop-shadow(0 0 0.75rem rgb(214, 214, 214));
 
   .logo {
     display: flex;
@@ -54,15 +56,14 @@ body {
 }
 
 .restro-card {
-  width: 350px;
-  font-family: Arial, Helvetica, sans-serif;
+  width: 250px;
   padding: 10px;
   border-radius: 20px;
   border: 1px solid white;
 
   img {
     width: 100%;
-    height: 250px;
+    height: 150px;
     object-fit: cover;
     border-radius: 20px;
   }
@@ -85,18 +86,35 @@ body {
       .name {
         font-size: 20px;
         font-weight: bold;
+        width: 200px;
       }
       .rating {
+        display: flex;
+        justify-content: end;
         border: 1px solid black;
         border-radius: 5px;
         padding: 0 5px;
+        height: 20px;
       }
       .cusine {
         color: #696969;
+        padding: 0%;
+        margin: 0%;
+
+        li {
+          list-style: none;
+          font-size: 15px;
+        }
       }
       .avg-price {
         color: #696969;
       }
+    }
+
+    .sla-container {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
     }
 
     .time {
@@ -107,7 +125,7 @@ body {
   .shimmer {
     .shimmer-image {
       width: 100%;
-      height: 250px;
+      height: 150px;
       border-radius: 20px;
       background-color: #f2f2f2;
     }
@@ -127,6 +145,7 @@ body {
         width: 200px;
         background-color: #f2f2f2;
       }
+
       .shimmer-rating,
       .shimmer-avg-price {
         height: 20px;
@@ -149,12 +168,24 @@ body {
   cursor: pointer;
 }
 
+.shimmer-cat-list {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+
+  .shimmer-cat-img {
+    height: 100;
+    width: 100;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+  }
+}
+
 .body {
-  padding: 0 2%;
+  padding: 0 8%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
 
   .action-btn {
     display: flex;
@@ -179,8 +210,33 @@ body {
 
   .res-container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 0 8%;
+  }
+
+  .cat-container {
+    .cat-list {
+      display: flex;
+      gap: 30px;
+      overflow-x: scroll;
+
+      img {
+        height: 180px;
+        width: 144px;
+        object-fit: contain;
+        cursor: pointer;
+      }
+    }
+
+    .cat-list::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .line {
+    margin: 10px 0;
+    height: 2px;
+    background-color: #f2f2f2;
   }
 }

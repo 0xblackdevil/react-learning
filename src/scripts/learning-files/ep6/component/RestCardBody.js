@@ -8,8 +8,14 @@ export default RestCardBody = ({ restroData }) => {
      * It's called as conditional rendering 
      */
     return restroData.length === 0 ? <Shimmer /> : (
-        <div className='res-container'>
-            {restroData.map(restaurant => <RestroCard data={restaurant} key={restaurant.info.id} />)}
+        <div>
+            <h2>Restaurants with online food delivery</h2>
+
+            <div className='res-container'>
+                {restroData.map(restaurant => <RestroCard data={restaurant} key={restaurant.info.id} />)}
+            </div>
+
         </div>
+
     );
 }

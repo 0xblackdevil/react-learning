@@ -16,9 +16,11 @@ export default RestroCard = ({ data }) => {
                         (cusine, index) => <li key={index} >{cusine}</li>
                     )}
                 </ul>
-                <h5 className='avg-price'>{costForTwo}</h5>
+                <div className="sla-container">
+                    <h5 className='avg-price'>{costForTwo}</h5>
+                    <h5 className='esti-time'>{slaString}</h5>
+                </div>
             </div>
-
         </div>
     </div>)
 }
