@@ -17,6 +17,8 @@ export default BodyComponent = () => {
      * optional channing | Shimmer ui
      */
     const [restroData, setRestroData] = useState([]);
+    const [filterData, setFilterData] = useState([]);
+
     const [searchData, setSearchData] = useState("");
 
     useEffect(() => {
@@ -29,6 +31,7 @@ export default BodyComponent = () => {
 
             const json = await data.json();
             setRestroData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setFilterData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         } catch (e) {
             return e;
         }
@@ -44,17 +47,19 @@ export default BodyComponent = () => {
                     <button
                         className="filter-btn"
                         onClick={() => {
-                            const result = RESTRO_DATA.reduce((acc, curr) => {
-                                curr.info.cuisines.map(c => {
-                                    if (c === searchData) {
-                                        acc.push(curr);
-                                    }
-                                });
+                            // const result = RESTRO_DATA.reduce((acc, curr) => {
+                            //     curr.info.cuisines.map(c => {
+                            //         if (c === searchData) {
+                            //             acc.push(curr);
+                            //         }
+                            //     });
 
-                                return acc;
-                            }, []);
+                            //     return acc;
+                            // }, []);
 
-                            setRestroData(result)
+                            const result = restroData.filter(res => res.info.name.toLowerCase().includes(searchData.toLowerCase()));
+
+                            setFilterData(result)
                         }}
                     >
                         Search
@@ -64,7 +69,7 @@ export default BodyComponent = () => {
             {/* <div className='res-container'>
                 {restroData.map(restaurant => <RestroCard data={restaurant} key={restaurant.info.id} />)}
             </div> */}
-            <RestCardBody restroData={restroData} />
+            <RestCardBody restroData={filterData} />
         </div >
     )
 }

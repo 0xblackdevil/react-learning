@@ -21,20 +21,34 @@ body {
     }
   }
 
-  ul {
+  .nav-items {
     display: flex;
-    list-style: none;
     gap: 2em;
 
-    li {
-      font-size: 15px;
+    button {
+      background: transparent;
+      border: 1px black solid;
+      border-radius: 5px;
+      padding: 0 20px;
+      cursor: pointer;
+      width: 100px;
     }
 
-    li:hover {
-      font-weight: bold;
-      animation-delay: 500ms;
-      cursor: pointer;
-      font-style: oblique;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 2em;
+
+      li {
+        font-size: 15px;
+      }
+
+      li:hover {
+        font-weight: bold;
+        animation-delay: 500ms;
+        cursor: pointer;
+        font-style: oblique;
+      }
     }
   }
 }

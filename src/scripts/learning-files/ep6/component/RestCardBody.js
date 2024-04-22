@@ -3,11 +3,11 @@ import Shimmer from "./Shimmer";
 
 export default RestCardBody = ({ restroData }) => {
 
-    if (restroData.length === 0) {
-        return <Shimmer />
-    }
-
-    return (
+    /**
+     * This condition will check if the data is available or not
+     * It's called as conditional rendering 
+     */
+    return restroData.length === 0 ? <Shimmer /> : (
         <div className='res-container'>
             {restroData.map(restaurant => <RestroCard data={restaurant} key={restaurant.info.id} />)}
         </div>

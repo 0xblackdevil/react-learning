@@ -16,6 +16,8 @@ import BodyComponent from './component/BodyComponent';
  * There are 2 approaches to fatch the data from the server
  *  1. When app load => Fetch all the data => Rendering to the UI
  *  2. When app load => Render the UI => Fetch the data => Re-render the UI
+ * 
+ * Whenevey the state variable like useState update the react trigger a reconciliation cycle(re-render the component)
  */
 
 export default EP6Learning = () => {
