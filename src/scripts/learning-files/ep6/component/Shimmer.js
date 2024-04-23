@@ -1,4 +1,4 @@
-import "../master.scss";
+
 
 export default Shimmer = () => {
     return <div className="res-container">

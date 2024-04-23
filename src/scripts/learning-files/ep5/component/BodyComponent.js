@@ -5,7 +5,6 @@ import { useState } from "react";
 
 
 export default BodyComponent = () => {
-
     // local state variable to store the restaurant data
     // it keep the sync with the data and the UI
 

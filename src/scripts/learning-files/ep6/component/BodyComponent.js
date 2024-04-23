@@ -1,15 +1,11 @@
-
 import { useEffect, useState } from "react";
 
-import "../master.scss";
 import RestCardBody from "./RestCardBody";
 import CategoryBody from "./CategoryBody";
 
-
-
 export default BodyComponent = () => {
     /**
-©     * useEffect() takes 2 arguments
+     * useEffect() takes 2 arguments
      *  1. Callback function
      *  2. Dependency array
      * 
@@ -37,6 +33,8 @@ export default BodyComponent = () => {
             setFilterData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
             setCategoryData(json?.data.cards[0].card.card);
+
+            console.log(json?.data?.cards[4]?.card?.card);
         } catch (e) {
             return e;
         }

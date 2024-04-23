@@ -23,7 +23,7 @@ export default Ep5BodyComponent = () => {
                         onClick={() => {
                             const result = RESTRO_DATA.reduce((acc, curr) => {
                                 curr.info.cuisines.map(c => {
-                                    if (c === searchData) {
+                                    if (c.name === searchData) {
                                         acc.push(curr);
                                     }
                                 });
