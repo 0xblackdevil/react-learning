@@ -1,4 +1,4 @@
-import RestroCard from "../../ep5/component/RestroCard";
+import RestroCard from "./RestroCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 

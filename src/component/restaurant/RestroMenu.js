@@ -1,4 +1,4 @@
-import { IMAGE_BASE_URL } from "../../../ep5/utils/const";
+import { IMAGE_BASE_URL } from "../../utils/const";
 
 export default MenuPage = ({ _menuObject }) => {
     return <div className="menu-page">

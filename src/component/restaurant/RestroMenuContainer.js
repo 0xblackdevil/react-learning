@@ -1,8 +1,8 @@
 
 import { useParams } from "react-router-dom";
-import useRestMenu from "../hooks/useRestMenu";
-import RestroDetail from "../../ep7/component/RestroMenu/RestroDetail";
-import RestroMenu from "../../ep7/component/RestroMenu/RestroMenu";
+import useRestMenu from "../../hooks/useRestMenu";
+import RestroDetail from "./RestroDetail";
+import RestroMenu from "./RestroMenu";
 
 export default RestroMenu = () => {
 

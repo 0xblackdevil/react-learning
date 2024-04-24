@@ -1,4 +1,4 @@
-import { IMAGE_BASE_URL } from "../utils/const";
+import { IMAGE_BASE_URL } from "../../utils/const";
 
 export default RestroCard = ({ data }) => {
     const { cloudinaryImageId, name, avgRating, cuisines, sla: { slaString }, costForTwo } = data.info;

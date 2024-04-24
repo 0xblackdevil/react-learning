@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FATCH_RESTRO_MENU_API } from "../../ep5/utils/const";
+import { FATCH_RESTRO_MENU_API } from "../utils/const";
 
 export default useRestMenu = (id) => {
 

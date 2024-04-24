@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FATCH_RESTRO_LIST } from "../../ep5/utils/const";
+import { FATCH_RESTRO_LIST } from "../utils/const";
 
 export default useRestroList = () => {
 

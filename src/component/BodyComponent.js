@@ -1,7 +1,7 @@
 import useRestroList from "../hooks/useRestroList"
 
-import CategoryBody from "../../ep6/component/CategoryBody";
-import RestCardBody from "../../ep6/component/RestCardBody";
+import CategoryBody from "./category/CategoryBody";
+import RestCardBody from "./restaurant/RestCardBody";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 
 export default BodyComponent = () => {

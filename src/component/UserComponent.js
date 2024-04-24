@@ -1,5 +1,5 @@
 import React from "react";
-import { GITHUB_API } from "../../ep5/utils/const";
+import { GITHUB_API } from "../utils/const";
 
 export default class UserComponent extends React.Component {
 

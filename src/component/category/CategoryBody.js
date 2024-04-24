@@ -1,5 +1,5 @@
-import { IMAGE_BASE_URL } from "../../ep5/utils/const";
-import CategoryShimmer from "./Category-Shimmer";
+import { IMAGE_BASE_URL } from "../../utils/const";
+import CategoryShimmer from "./Category-shimmer";
 
 export default CategoryBody = ({ categoryData }) => {
 
