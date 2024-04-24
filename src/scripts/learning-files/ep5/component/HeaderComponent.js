@@ -10,6 +10,7 @@ export default HeaderComponent = () => {
             </div>
             <div className='nav-items'>
                 <ul>
+                    <Link className="url" to="/about">About</Link>
                     <Link className="url" to="/offer">Offer</Link>
                     <Link className="url" to="/help">Help</Link>
                     <Link className="url" to="/cart">Cart</Link>

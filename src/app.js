@@ -10,14 +10,19 @@ import OfferComponent from "./scripts/learning-files/ep7/component/OfferComponen
 import HelpComponent from "./scripts/learning-files/ep7/component/HelpComponent";
 import BodyComponent from "./scripts/learning-files/ep6/component/BodyComponent";
 import RestroMenuPage from "./scripts/learning-files/ep7/component/RestroMenu/RestroMenuContainer";
+import About from "./scripts/learning-files/ep8/component/About";
+import AboutClassComponent from "./scripts/learning-files/ep8/component/AboutClass";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
+const copyRightYear = 2024;
 const appRoute = createBrowserRouter([
     {
         path: "/", element: <EP7Learning />, errorElement: <ErrorPage />,
         children: [
             { path: "", element: <BodyComponent /> },
+            { path: "aboutfun", element: <About _CpRightYear={copyRightYear} /> },
+            { path: "about", element: <AboutClassComponent _CpRightYear={copyRightYear} /> },
             { path: "offer", element: <OfferComponent /> },
             { path: "help", element: <HelpComponent /> },
             { path: "restorants/:id", element: <RestroMenuPage /> }

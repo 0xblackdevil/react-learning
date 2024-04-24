@@ -346,3 +346,55 @@ body {
     background-color: #f2f2f2;
   }
 }
+
+.about {
+  padding: 2% 5%;
+  .review-container {
+    .rating-body {
+      display: flex;
+      gap: 20px;
+      .rating-container {
+        font-size: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.user-data-container {
+  padding: 3% 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100px;
+  width: fit-content;
+
+  h3,
+  p {
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .profile-img img {
+    height: 80px;
+    width: 80px;
+    border: 1px solid #bbbbbb;
+    border-radius: 100%;
+  }
+
+  .profile-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      text-decoration: none;
+      color: white;
+      width: fit-content;
+      background-color: black;
+      padding: 3% 10%;
+      border: transparent;
+      border-radius: 5px;
+    }
+  }
+}
