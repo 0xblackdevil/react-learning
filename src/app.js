@@ -1,5 +1,3 @@
-import "./master.scss"
-
 import ReactDOM from 'react-dom/client';
 import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";

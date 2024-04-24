@@ -9,10 +9,8 @@ export default RestCardBody = ({ restroData }) => {
      * It's called as conditional rendering 
      */
     return restroData.length === 0 ? <Shimmer /> : (
-
-        <div className='res-container'>
-            {restroData.map(restaurant => <Link to={"/restorants/" + restaurant.info.id} className="card-link" key={restaurant.info.id}><RestroCard data={restaurant} key={restaurant.info.id} /></Link>)}
+        <div className='grid grid-cols-4 gap-5'>
+            {restroData.map(restaurant => <Link to={"/restorants/" + restaurant.info.id} key={restaurant.info.id}><RestroCard data={restaurant} key={restaurant.info.id} /></Link>)}
         </div>
-
     );
 }

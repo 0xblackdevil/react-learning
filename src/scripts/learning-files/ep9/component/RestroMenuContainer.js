@@ -9,7 +9,7 @@ export default RestroMenu = () => {
     const { id } = useParams();
     const [restroState, restroMenu] = useRestMenu(id);
 
-    return <div className="restro-menu-container">
+    return <div className=" px-64">
         <RestroDetail _restroDetail={restroState} />
         <RestroMenu _menuObject={restroMenu} />
     </div>
