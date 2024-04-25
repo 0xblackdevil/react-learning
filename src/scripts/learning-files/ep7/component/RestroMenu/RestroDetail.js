@@ -1,5 +1,5 @@
 export default RestroDetail = ({ _restroDetail }) => {
-    console.log(_restroDetail);
+
     const { name, avgRatingString, costForTwoMessage, cuisines, totalRatingsString } = _restroDetail;
     return <div className=" pt-20">
         <h1 className="text-3xl font-bold">{name}</h1>

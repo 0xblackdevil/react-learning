@@ -1,11 +1,23 @@
-import { IMAGE_BASE_URL } from "../../../ep5/utils/const";
+import MenuCardComponent from "../../../ep11/component/menuCardComponent";
 
 export default MenuPage = ({ _menuObject }) => {
-    return <div >
-        {_menuObject?.map((menu, index) => {
-            if (menu?.card?.card?.itemCards) {
-                const { title, itemCards } = menu?.card?.card;
-                return <div key={index} className="mt-10">
+    return <div>
+        {
+            _menuObject.map((menuSection, index) => {
+                const { title, itemCards } = menuSection.card.card;
+                return <div key={index}>
+                    <h1 className="text-2xl font-bold py-5">{title}</h1>
+                    {itemCards.map((item, index) => {
+                        return <MenuCardComponent menuItem={item?.card?.info} key={item?.card?.info?.id} />
+                    })}
+                </div>
+            })
+        }
+    </div>
+}
+
+/**
+ *  <div key={index} className="mt-10">
                     <h2 className=" font-bold text-2xl">{title} ({itemCards.length})</h2>
                     <div className="flex flex-col gap-10">
                         {itemCards.map(item => {
@@ -33,10 +45,4 @@ export default MenuPage = ({ _menuObject }) => {
                         }
                         )}
                     </div>
-
-                </div>
-            }
-        })}
-
-    </div>
-}
+ */

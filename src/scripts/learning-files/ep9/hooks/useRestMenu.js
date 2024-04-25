@@ -15,12 +15,14 @@ export default useRestMenu = (id) => {
             const result = await fetch(FATCH_RESTRO_MENU_API + id)
             const json = await result.json();
             setRestroState(json.data?.cards[2]?.card?.card?.info);
-            setRestroMenu(json.data?.cards[4].groupedCard.cardGroupMap.REGULAR.cards);
+
+            const rawArr = json.data?.cards[4].groupedCard.cardGroupMap.REGULAR.cards;
+            const menu = rawArr.filter(item => item.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+            setRestroMenu(menu);
+
         } catch (e) {
             return e;
         }
     }
-
-    console.log(restroState, restroMenu);
     return [restroState, restroMenu];
 }

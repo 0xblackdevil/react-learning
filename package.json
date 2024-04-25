@@ -4,7 +4,7 @@
   "description": "A simple Node.js app to say Namaste to the world!",
   "scripts": {
     "test": "jest",
-    "start": "parcel index.html",
+    "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
   "author": "Meet Zinzuvadiya",
