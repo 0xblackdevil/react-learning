@@ -1,8 +1,8 @@
-import useRestroList from "../hooks/useRestroList"
+import useRestroList from "../../ep9/hooks/useRestroList"
 
 import CategoryBody from "../../ep6/component/CategoryBody";
-import RestCardBody from "../../ep11/component/RestCardBody"
-import useOnlineStatus from "../hooks/useOnlineStatus";
+import RestCardBody from "./RestroCardBody"
+import useOnlineStatus from "../../ep9/hooks/useOnlineStatus";
 
 export default BodyComponent = () => {
 

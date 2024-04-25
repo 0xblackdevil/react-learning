@@ -26,3 +26,13 @@ export default RestroCard = ({ data }) => {
         </div>
     )
 }
+
+export const SpacialDiscountedCard = (RestroCard) => {
+    return (props) => {
+        console.log(props);
+        return (<div className="relative">
+            <div className=" z-20 absolute bg-red-500 text-white bottom-0 left-3"><h2 className="py-1 px-5">Closed</h2></div>
+            <RestroCard data={props.data} />
+        </div>)
+    }
+}

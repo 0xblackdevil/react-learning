@@ -9,7 +9,7 @@ import ErrorPage from "./scripts/learning-files/ep7/component/ErrorPage";
 import OfferComponent from "./scripts/learning-files/ep7/component/OfferComponent";
 import HelpComponent from "./scripts/learning-files/ep7/component/HelpComponent";
 // import BodyComponent from "./scripts/learning-files/ep6/component/BodyComponent";
-import BodyComponent from "./scripts/learning-files/ep9/component/BodyComponent";
+import BodyComponent from "./scripts/learning-files/ep11/component/BodyComponent";
 // import RestroMenuPage from "./scripts/learning-files/ep7/component/RestroMenu/RestroMenuContainer";
 import RestroMenuPage from "./scripts/learning-files/ep9/component/RestroMenuContainer";
 import About from "./scripts/learning-files/ep8/component/About";
