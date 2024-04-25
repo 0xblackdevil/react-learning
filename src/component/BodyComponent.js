@@ -11,7 +11,7 @@ export default BodyComponent = () => {
 
 
     return !userState ? <h1>Looks like you'r offline</h1> :
-        <div className='body'>
+        <div className=''>
             <div>
                 <CategoryBody categoryData={categoryData} />
                 <div className="line" />
