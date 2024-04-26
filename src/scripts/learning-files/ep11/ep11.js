@@ -17,3 +17,7 @@
  * Lifiting State Up => When we have multiple components that share the same state, we can lift the state up to their closest common ancestor.
  * Controlled Components || Uncontrolled Components
  */
+
+/**
+ * React has a one way data stream like from parent to child
+ */
