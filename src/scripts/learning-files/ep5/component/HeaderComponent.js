@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../../ep11/utils/UserContext";
 
 export default HeaderComponent = () => {
     const [authenticated, setAuthenticated] = useState(false);
+    const { loggedInUser } = useContext(UserContext);
     return (
         <div className='flex justify-between items-center px-20 py-5 shadow-lg'>
             <div className='logo'>
@@ -18,6 +20,8 @@ export default HeaderComponent = () => {
                 <button
                     className="border border-black px-5 py-2 rounded-full hover:bg-black hover:text-white duration-300"
                     onClick={() => setAuthenticated(!authenticated)}>{authenticated ? "Logout" : "Login"}</button>
+
+                <h1>{loggedInUser}</h1>
             </div>
         </div >
     );

@@ -34,5 +34,3 @@ export default BodyComponent = () => {
         </div >
     )
 }
-
-console.log(<BodyComponent />)

@@ -7,7 +7,7 @@ function OfferComponent() {
     useEffect(() => {
 
         const timer = setInterval(() => {
-            console.log("Hey there!!");
+
         }, 1000);
 
         return () => {

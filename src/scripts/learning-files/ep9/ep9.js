@@ -1,5 +1,8 @@
 import HeaderComponent from "../ep5/component/HeaderComponent"
 import { Outlet } from "react-router-dom"
+import { useState } from "react"
+import UserContext from "../ep11/utils/UserContext"
+
 
 /**
  * What is modular programming?
@@ -34,11 +37,17 @@ import { Outlet } from "react-router-dom"
  *  - then we can use the component as a normal component
  */
 
+
+
 export default EP9Learning = () => {
+
+    const [user, setUser] = useState('Demon');
     return (
-        <div className='app'>
-            <HeaderComponent />
-            <Outlet />
-        </div>
+        <UserContext.Provider value={{ loggedInUser: user, setUser }}>
+            <div className='app'>
+                <HeaderComponent />
+                <Outlet />
+            </div>
+        </UserContext.Provider>
     )
 }

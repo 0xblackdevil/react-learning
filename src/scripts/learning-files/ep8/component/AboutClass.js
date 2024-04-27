@@ -1,5 +1,6 @@
 import React from 'react';
 import UserComponent from './UserComponent';
+import UserContext from '../../ep11/utils/UserContext';
 
 export default class AboutClassComponent extends React.Component {
     constructor(props) {
@@ -13,7 +14,6 @@ export default class AboutClassComponent extends React.Component {
 
     componentDidMount() {
         this.timer = setInterval(() => {
-            console.log("Timer is running...")
         }, 1000);
     }
 
@@ -27,6 +27,13 @@ export default class AboutClassComponent extends React.Component {
             <p>FoodKatta is India's largest and highest-valued online food ordering and delivery platform founded in 2014. FoodKatta is based in Pune, India, and as of March 2019, was operating out of 100 Indian cities. In early 2019, FoodKatta expanded into general product deliveries under the name FoodKatta Stores.</p>
             <p>@ {this.props._CpRightYear} all rights recive</p>
             <UserComponent username="0xblackdevil" />
+            <UserContext.Consumer>
+                {
+                    (user) => {
+                        return <h1>{user.loggedInUser}</h1>
+                    }
+                }
+            </UserContext.Consumer>
             <div className="review-container">
                 <h3>How much you like us?</h3>
                 <div>

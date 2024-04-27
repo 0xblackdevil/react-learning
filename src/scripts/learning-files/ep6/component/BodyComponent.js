@@ -34,7 +34,7 @@ export default BodyComponent = () => {
 
             setCategoryData(json?.data.cards[0].card.card);
 
-            console.log(json?.data?.cards[4]?.card?.card);
+
         } catch (e) {
             return e;
         }
