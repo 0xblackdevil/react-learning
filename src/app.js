@@ -5,12 +5,12 @@ import { Suspense, lazy } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import AppLayout from "./layout";
-import ErrorPage from "./component/ErrorPage";
-import BodyComponent from "./component/BodyComponent";
-import OfferComponent from "./component/OfferComponent";
-import HelpComponent from "./component/HelpComponent";
-import RestroMenuPage from "./component/restaurant/RestroMenuContainer";
-const AboutComponent = lazy(() => import("./component/AboutClass"));
+import ErrorPage from "./components/ErrorPage";
+import BodyComponent from "./components/BodyComponent";
+import OfferComponent from "./components/OfferComponent";
+import HelpComponent from "./components/HelpComponent";
+import RestroMenuPage from "./components/restaurant/RestroMenuContainer";
+const AboutComponent = lazy(() => import("./components/AboutClass"));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

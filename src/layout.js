@@ -1,11 +1,15 @@
-import HeaderComponent from "./component/HeaderComponent"
-import { Outlet } from "react-router-dom"
+import { Provider } from "react-redux"
+import HeaderComponent from "./components/HeaderComponent"
+import { Outlet } from "react-router-dom";
+import appStore from "./utils/appStore";
 
 export default AppLayout = () => {
     return (
-        <div className='app'>
-            <HeaderComponent />
-            <Outlet />
-        </div>
+        <Provider store={appStore}>
+            <div className='app'>
+                <HeaderComponent />
+                <Outlet />
+            </div>
+        </Provider>
     )
 }
