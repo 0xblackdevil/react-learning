@@ -17,8 +17,6 @@ export default BodyComponent = () => {
     return !userState ? <h1>Looks like you'r offline</h1> :
         <div className='px-20 py-2'>
             <div>
-                <h1>Hello, {loggedInUser}</h1>
-                <input type="text" placeholder="change user name" value={loggedInUser} onChange={(e) => setUser(e.target.value)} />
                 <CategoryBody categoryData={categoryData} />
                 <div className="" />
                 <RestCardBody restroData={restroData} />

@@ -2,6 +2,8 @@ import HeaderComponent from "../ep5/component/HeaderComponent"
 import { Outlet } from "react-router-dom"
 import { useState } from "react"
 import UserContext from "../ep11/utils/UserContext"
+import { Provider } from "react-redux"
+import appStore from "../ep12/utils/app"
 
 
 /**
@@ -43,11 +45,13 @@ export default EP9Learning = () => {
 
     const [user, setUser] = useState('Demon');
     return (
-        <UserContext.Provider value={{ loggedInUser: user, setUser }}>
-            <div className='app'>
-                <HeaderComponent />
-                <Outlet />
-            </div>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{ loggedInUser: user, setUser }}>
+                <div className='app'>
+                    <HeaderComponent />
+                    <Outlet />
+                </div>
+            </UserContext.Provider>
+        </Provider>
     )
 }

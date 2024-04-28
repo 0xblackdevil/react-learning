@@ -13,6 +13,7 @@ import BodyComponent from "./scripts/learning-files/ep11/component/BodyComponent
 // import RestroMenuPage from "./scripts/learning-files/ep7/component/RestroMenu/RestroMenuContainer";
 import RestroMenuPage from "./scripts/learning-files/ep9/component/RestroMenuContainer";
 import About from "./scripts/learning-files/ep8/component/About";
+import Cart from './scripts/learning-files/ep12/components/cart';
 // import AboutClassComponent from "./scripts/learning-files/ep8/component/AboutClass";
 const AboutClassComponent = lazy(() => import("./scripts/learning-files/ep8/component/AboutClass"));
 
@@ -27,6 +28,7 @@ const appRoute = createBrowserRouter([
             { path: "aboutfun", element: <About _CpRightYear={copyRightYear} /> },
             { path: "about", element: <Suspense fallback={<h1>Loading !!!</h1>}> <AboutClassComponent _CpRightYear={copyRightYear} /> </Suspense> },
             { path: "offer", element: <OfferComponent /> },
+            { path: "cart", element: <Cart /> },
             { path: "help", element: <HelpComponent /> },
             { path: "restorants/:id", element: <RestroMenuPage /> }
         ]
